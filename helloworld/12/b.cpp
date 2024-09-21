@@ -2,16 +2,24 @@
 using namespace std;
 
 int main(){
-    int n;
+    int n,a,e1,e2;
+    a=1;
     cin >> n;
-    double k=25+0.01*n;
-    if(k<100){
-        cout << 100;
+    e1=0;
+    e2=1;
+    int list[100];
+    for(int i=0; i<n; i++){
+        list[i]=i+1;
+        e1+=i+1;
+        e2*=i+1;
     }
-    else if(k>2000){
-        cout << 2000;
+    if (e1==e2){
+        for(int i;i<n;i++){
+            cout << list[i] << " ";
+        }
     }
     else{
-        cout << k;
+        cout << "-1";
     }
+    
 }
